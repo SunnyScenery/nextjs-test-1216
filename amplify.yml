@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - export AMPLIFY_INTERNAL_NEXTJS_MINIMAL_SERVER="true"
         - corepack enable
         - corepack prepare pnpm@9 --activate
         - pnpm config set store-dir .pnpm-store
